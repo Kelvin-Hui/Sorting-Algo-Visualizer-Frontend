@@ -1,38 +1,49 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin : 1px;
+}
+
+.grid-container{
+  display: grid;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 10% 90%;
+  grid-template-areas: "Header Header"
+                       "Input Array_Visualizer" ;
 }
 
-.App-link {
-  color: #61dafb;
+.header{
+  grid-area : Header;
+  border: 3px solid black;
+  border-radius: 40px;
+}
+.input{
+  grid-area : Input;
+  border: 5px ridge #3EFEED;
+  border-radius: 40px;
+  padding: 30px;
+
+  display : grid;
+  grid-template-rows: 10% 2.5% 12.5% 12.5% 10% 10% 2.5% 40%;
+  grid-template-areas: "genarray"
+                       "space"
+                       "arraysize"
+                       "speed"
+                       "select"
+                       "sort"
+                       "space"
+                       "Complexity" ;
+  margin:5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.array_visualizer{
+  grid-area : Array_Visualizer;
+  border: 5px ridge #50FF5D;
+  border-radius: 40px;
+  display: flex;
+  position: relative;
 }
