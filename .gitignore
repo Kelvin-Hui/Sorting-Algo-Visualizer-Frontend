@@ -28,5 +28,4 @@ yarn-error.log*
 /.firebase
 firebase.json
 .firebaserc
-debug.txt
 README.md
