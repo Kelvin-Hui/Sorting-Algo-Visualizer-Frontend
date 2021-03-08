@@ -1,49 +1,47 @@
 * {
-  box-sizing: border-box;
-  margin : 1px;
+    box-sizing: border-box;
+}
+.layout {
+    display: grid;
+    text-align: center;
+    align-items: center;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.input {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    height: 80%;
+    justify-content: center;
+    user-select: none;
+}
+.running {
+    color: limegreen;
+}
+.btn {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 gray;
+    margin-top: 5%;
+    padding: 5%;
+}
+.btn:active {
+    transform: translateY(2.5px);
 }
 
-.grid-container{
-  display: grid;
-  text-align: center;
-  align-items: center;
-  
-  grid-template-columns: 20% 80%;
-  grid-template-rows: 10% 90%;
-  grid-template-areas: "Header Header"
-                       "Input Array_Visualizer" ;
+.select {
+    border-radius: 5px;
+    padding: 5%;
 }
-
-.header{
-  grid-area : Header;
-  border: 3px solid black;
-  border-radius: 40px;
+.card {
+    box-shadow: 0 4px 8px 0 gray;
+    border-radius: 5px;
+    margin-bottom: 10%;
 }
-.input{
-  grid-area : Input;
-  border: 5px ridge #3EFEED;
-  border-radius: 40px;
-  padding: 30px;
-
-  display : grid;
-  grid-template-rows: 10% 2.5% 12.5% 12.5% 10% 10% 2.5% 40%;
-  grid-template-areas: "genarray"
-                       "space"
-                       "arraysize"
-                       "speed"
-                       "select"
-                       "sort"
-                       "space"
-                       "Complexity" ;
-  margin:5px;
-}
-
-
-
-.array_visualizer{
-  grid-area : Array_Visualizer;
-  border: 5px ridge #50FF5D;
-  border-radius: 40px;
-  display: flex;
-  position: relative;
+.logo {
+    height: 2vh;
+    width: 2vw;
+    margin: auto;
 }
